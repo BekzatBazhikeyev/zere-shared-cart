@@ -1,0 +1,21 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zere-shared-cart",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-20",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SHARED_CART",
+        "class_name": "SharedCart"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["SharedCart"]
+    }
+  ]
+}
